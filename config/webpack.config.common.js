@@ -2,7 +2,6 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const paths = require('./paths');
-const HappyPack = require('happypack');
 const AutoDllPlugin = require('autodll-webpack-plugin');
 
 module.exports = {
@@ -58,16 +57,6 @@ module.exports = {
     ],
   },
   plugins: [
-    // new HappyPack({
-    //   loaders: [
-    //     {
-    //       loader: 'babel-loader',
-    //       options: {
-    //         cacheDirectory: true,
-    //       },
-    //     },
-    //   ],
-    // }),
     new HtmlWebpackPlugin({
       inject: true,
       template: paths.appHtml,
