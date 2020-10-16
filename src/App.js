@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import Navs from './components/Navs';
 import StartMask from './components/StartMask';
 import LoveDuration from './components/slides/LoveDuration';
+import FirstMet from './components/slides/FirstMet';
+import Baiwangshan from './components/slides/Baiwangshan';
+import Drink from './components/slides/Drink';
 // import Letter from './components/slides/Letter';
 const StyledBody = styled.section`
   min-height: 740px;
@@ -45,7 +48,7 @@ const App = () => {
   return (
     <>
       {!start && <StartMask startPlay={handleStart} />}
-      {/* {start && (
+      {start && (
         <Navs
           goNext={() => {
             window.impress().next();
@@ -58,10 +61,13 @@ const App = () => {
                 }
           }
         />
-      )} */}
+      )}
       <StyledBody className={start ? 'start' : ''} id="impress">
         <LoveDuration />
         {/* <Letter step={currStep} /> */}
+        <FirstMet step={currStep} />
+        <Baiwangshan step={currStep} />
+        <Drink step={currStep} />
       </StyledBody>
     </>
   );

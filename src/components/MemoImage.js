@@ -134,7 +134,7 @@ export default function MemoImage({ img, title = '', desc = '', date = '' }) {
         {imgs.map((item, idx) => {
           return (
             <StyledBox key={idx}>
-              <LazyImage src={`https://gitee.com/zyanggc/oss/raw/master/memo/${item}`} />
+              <LazyImage src={`https://gitee.com/zyanggc/oss/raw/master/love_cong/${item}`} />
             </StyledBox>
           );
         })}
@@ -145,7 +145,7 @@ export default function MemoImage({ img, title = '', desc = '', date = '' }) {
           top: '88%',
           left: '-10px',
           transform: 'rotate(-100deg)',
-          right: 'auto'
+          right: 'auto',
         }}
         size="30px"
       />
